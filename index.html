@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gold Line Shipping Company Limited</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+}
+
+/* TOP HEADER */
+.top-header {
+    text-align: center;
+    background: #ffffff;
+    padding: 20px 0 10px;
+    border-bottom: 4px solid #c9a24d;
+}
+.top-header h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 1px;
+}
+
+/* LOGO */
+.logo-bar {
+    text-align: center;
+    padding: 10px 0 20px;
+    background: #ffffff;
+}
+.logo-bar img {
+    max-width: 220px;
+}
+
+/* NAVIGATION */
+.navbar {
+    background: #1f2933;
+    padding: 14px 0;
+    text-align: center;
+}
+.navbar a {
+    color: #ffffff;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.navbar a:hover {
+    color: #c9a24d;
+}
+
+/* MAIN CONTENT */
+.wrapper {
+    max-width: 1100px;
+    margin: 30px auto 60px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    padding: 40px;
+}
+
+/* SECTIONS */
+.section {
+    margin-top: 60px;
+}
+.section h2 {
+    color: #c9a24d;
+    border-left: 5px solid #c9a24d;
+    padding-left: 12px;
+    margin-bottom: 15px;
+}
+
+/* TRACKING */
+.tracking-box {
+    text-align: center;
+    margin-top: 20px;
+}
+.tracking-box input {
+    width: 65%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.tracking-box button {
+    padding: 14px 22px;
+    font-size: 16px;
+    background: #c9a24d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.tracking-box button:hover {
+    background: #b08c3f;
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+table th, table td {
+    padding: 14px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+table th {
+    background: #fafafa;
+    width: 35%;
+}
+
+/* STATUS */
+.status {
+    color: #2e7d32;
+    font-weight: bold;
+}
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 13px;
+    color: #777;
+}
+</style>
+</head>
+
+<body>
+
+<!-- COMPANY NAME -->
+<div class="top-header">
+    <h1>GOLD LINE SHIPPING COMPANY LIMITED</h1>
+</div>
+
+<!-- LOGO -->
+<div class="logo-bar">
+    <img src="gold-line-shipping-logo.jpg" alt="Gold Line Shipping Company Logo">
+</div>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#track">Track Shipment</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<div class="wrapper">
+
+<!-- ABOUT -->
+<div class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+        Gold Line Shipping Company Limited is a maritime logistics provider
+        specializing in sea freight, port agency services, project cargo handling,
+        and shipment tracking for high-value commodities.
+    </p>
+</div>
+
+<!-- SERVICES -->
+<div class="section" id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Sea Freight & Maritime Logistics</li>
+        <li>Port Agency Services</li>
+        <li>Project & High-Value Cargo Handling</li>
+        <li>Gold & Precious Metal Shipping</li>
+        <li>International Shipment Tracking</li>
+    </ul>
+</div>
+
+<!-- TRACKING -->
+<div class="section" id="track">
+    <h2>Track Your Shipment</h2>
+    <div class="tracking-box">
+        <input type="text" id="trackingInput" placeholder="Enter Tracking Number">
+        <button onclick="trackShipment()">Track Shipment</button>
+    </div>
+</div>
+
+<div id="trackingResult"></div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+    <h2>Contact Information</h2>
+    <table>
+        <tr><th>Email</th><td>goldlineshipping2734@gmail.com</td></tr>
+        <tr><th>Phone</th><td>+233 536 123 024</td></tr>
+        <tr><th>Office Location</th><td>Accra, Independence Avenue, Ghana</td></tr>
+    </table>
+</div>
+
+<div class="footer">
+    © 2026 Gold Line Shipping Company Limited. All rights reserved.
+</div>
+
+</div>
+
+<script>
+function trackShipment() {
+    const input = document.getElementById("trackingInput").value.trim();
+    const result = document.getElementById("trackingResult");
+
+    if (input === "GLU006927342005") {
+        result.innerHTML = `
+        <div class="section">
+            <h2>Shipment Information</h2>
+            <table>
+                <tr><th>Tracking Number</th><td>GLU006927342005</td></tr>
+                <tr><th>Carrier</th><td>Gold Line Shipping Company Limited</td></tr>
+                <tr><th>Shipping Method</th><td>By Sea</td></tr>
+                <tr><th>Package Weight</th><td>3 kg</td></tr>
+                <tr><th>Commodity</th><td>Gold</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Sender Details</h2>
+            <table>
+                <tr><th>Name</th><td>Gold Line Shipping Company Limited</td></tr>
+                <tr><th>Address</th><td>Accra, Ghana</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Recipient Details</h2>
+            <table>
+                <tr><th>Name</th><td>Robert Eldon Payne Jr.</td></tr>
+                <tr><th>Delivery Address</th>
+                <td>1300 Nashville Pike, Apt 1106, Gallatin, TN 37066, USA</td></tr>
+                <tr><th>Email</th><td>vandyboys229@gmail.com</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Current Shipment Status</h2>
+            <table>
+                <tr><th>Status</th>
+                <td class="status">At company office, getting ready for labeling and shipment</td></tr>
+                <tr><th>Current Location</th><td>Accra, Ghana</td></tr>
+                <tr><th>Next Step</th>
+                <td>Package will be labeled and dispatched for sea shipment</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Tracking History</h2>
+            <table>
+                <tr>
+                    <th>Date & Time</th>
+                    <th>Event Description</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>—</td>
+                    <td>Package at company office, preparing for labeling</td>
+                    <td>Accra, Ghana</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Estimated Delivery</h2>
+            <p>
+                Estimated delivery date will be confirmed after sea shipment
+                dispatch and depends on transit time and port clearance.
+            </p>
+        </div>
+        `;
+    } else {
+        result.innerHTML = `<p class="error">Tracking number not found. Please verify and try again.</p>`;
+    }
+}
+</script>
+
+</body>
+</html>
